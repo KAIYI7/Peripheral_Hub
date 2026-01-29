@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site_Clients.master.cs" Inherits="PeripheralHub.Site_Clients" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <link href="Images/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/Styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 91px;
+            height: 35px;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <form runat="server">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="Clients_Main.aspx"><img src="Images/peripheralhub-high-resolution-logo-transparent.png" alt="logo" class="auto-style1"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Clients_Products.aspx">PRODUCT</a></li>
+                        <li><a href="Clients_Order.aspx">ORDER</a></li>
+                        <li><a href="Clients_Account.aspx">ACCOUNT</a></li>
+                        <li><a href="CartPage.aspx"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><span id="CartItemCount" runat="server">0</span></sup></a></li>
+                        <!--<li><a><span class="badge">
+                            <asp:Label ID="ActifsUsers" runat="server" Text="" ForeColor="Lime"></asp:Label></span></a></li>
+                        -->
+                        <li>
+                            <asp:LinkButton ID="BtnDeconnection" CssClass="btn-danger text-primary" runat="server" OnClick="BtnDeconnection_Click">Log Out</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="GlobalContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+    <footer>
+        <table class="footer-table">
+        <tr>
+            <td class="footer-column">
+                <h5>Contact</h5>
+                <p><strong>Address:</strong>18, Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur.</p>
+                <p><strong>Tel:</strong> <a href="tel:+60341450123">(6)03-41450123</a></p>
+                <p><strong>Hours:</strong> 10:00 - 22:00, Mon - Sat</p>
+            </td>
+            <td class="footer-column">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About</h5>
+                <a href="AboutUs.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About Us</a><br>
+                <a href="ContactUs.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact Us</a>
+            </td>
+            <td class="footer-column">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Account</h5>
+                <a href="SignIn.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign In</a><br>
+                <a href="CartPage.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View Cart</a><br>
+            </td>
+            <td class="footer-column">
+                <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Accept Payment Methods</h5>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="Images/mastercard_logo.jpg" alt="mastercard" style="width:50px;height:40px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="Images/visa_logo.png" alt="visa" style="width:50px;height:40px;">
+            </td>
+        </tr>
+    </table>
+    <div class="copyright">
+        <p>© 2024, PeripheralHub ® Website Term of Use</p>
+    </div>
+    </footer>
+    </form>
+</body>
+</html>

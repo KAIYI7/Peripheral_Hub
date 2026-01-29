@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site_Default.master.cs" Inherits="PeripheralHub.Site_Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Login</title>
+    <link href="Images/favicon.ico" rel="icon" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/Styles.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">
+                    <img src="Images/peripheralhub-high-resolution-logo-transparent.png" alt="logo" style="width: 91px; height: 35px;" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="SignIn.aspx">SIGN IN</a></li>
+                    <li><a href="SignUp.aspx">SIGN UP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="GlobalContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <table class="footer-table">
+            <tr>
+                <td class="footer-column">
+                    <h5>Contact</h5>
+                    <p><strong>Address:</strong> Jalan Genting Kelang, Setapak, 53300 Kuala Lumpur.</p>
+                    <p><strong>Tel:</strong> <a href="tel:+60341450123">(6)03-41450123</a></p>
+                    <p><strong>Hours:</strong> 10:00 - 22:00, Mon - Sat</p>
+                </td>
+                <td class="footer-column">
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About</h5>
+                    <a href="AboutUs.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; About Us</a><br>
+                    <a href="ContactUs.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contact Us</a>
+                </td>
+                <td class="footer-column">
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My Account</h5>
+                    <a href="SignIn.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sign In</a><br>
+                    <a href="CartPage.aspx">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View Cart</a><br>
+                    
+                </td>
+                <td class="footer-column">
+                    <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Accept Payment Methods</h5>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="Images/mastercard_logo.jpg" alt="mastercard" style="width: 50px; height: 40px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="Images/visa_logo.png" alt="visa" style="width: 50px; height: 40px;">
+                </td>
+            </tr>
+        </table>
+        <div class="copyright">
+            <p>© 2024, PeripheralHub ® Website Term of Use</p>
+        </div>
+    </footer>
+</body>
+</html>
